@@ -1,0 +1,146 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body, button {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000; color: #fff;
+  text-align: center;
+}
+
+button {
+  padding: 12px 30px;
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 6px;
+  box-shadow: 0 0 15px #ff4081;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+button:hover { transform: scale(1.05); }
+
+#start-screen {
+  height: 100vh;
+  background: url('images/family-bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px 20px;
+  border-radius: 12px;
+  animation: fadeIn 2s ease-in;
+}
+.intro-title {
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s infinite;
+  background-size: 800px 100%;
+}
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.intro-sub { font-size: 1.2em; margin-top: 10px; }
+
+#slideshow-container {
+  display: none;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#slideshow {
+  width: 35vw;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff4081;
+  transition: all 1s ease-in-out;
+}
+.caption-text {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.grain-overlay, .sparkle-overlay {
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  object-fit: cover;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+#countdown-screen {
+  display: none;
+  height: 100vh;
+  background: radial-gradient(circle, #111, #000);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#countdown {
+  font-size: 6em;
+  color: #ff4081;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.fade-text {
+  margin-top: 10px;
+  font-size: 1.3em;
+  animation: fadeText 2s infinite alternate;
+}
+@keyframes fadeText {
+  from { opacity: 0.5; } to { opacity: 1; }
+}
+
+#video-section {
+  display: none;
+  padding: 30px;
+  background: radial-gradient(circle at top, #111, #000);
+}
+#surprise-video {
+  width: 50vw;
+  max-width: 700px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}
+.final-message {
+  margin-top: 20px;
+  font-size: 1.6em;
+  color: #ff4081;
+  text-shadow: 0 0 8px #fff;
+}
+/* Same as before above... */
+
+#slideshow {
+  width: 25vw; /* 🔧 Smaller photo size so captions fit well */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff4081;
+  transition: all 1s ease-in-out;
+}
+
+/* Countdown and fade text – no change */
+
+#surprise-video {
+  width: 30vw; /* 🔧 Reduced video size by ~40% */
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+}

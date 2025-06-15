@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Father’s Day Nanna</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌟 Intro Screen -->
+  <div id="start-screen">
+    <div class="intro-overlay">
+      <h1 class="intro-title">Happy Father’s Day Nanna 💖</h1>
+      <p class="intro-sub">మీ ప్రేమకు కృతజ్ఞతగా చిన్న కానుక…</p>
+      <button onclick="startSurprise()">Click for Surprise</button>
+    </div>
+  </div>
+
+  <!-- 🎵 Background Music -->
+  <audio id="background-music" loop>
+    <source src="audio/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ⏳ Countdown Music -->
+  <audio id="countdown-music">
+    <source src="audio/countdown.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- 🖼 Slideshow -->
+  <div id="slideshow-container">
+    <img id="slideshow" src="" alt="Memories with Nanna" />
+    <div id="caption" class="caption-text"></div>
+    <video class="grain-overlay" autoplay muted loop>
+      <source src="video/grain.mp4" type="video/mp4" />
+    </video>
+    <video class="sparkle-overlay" autoplay muted loop>
+      <source src="video/sparkles.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- ⏱ Countdown -->
+  <div id="countdown-screen">
+    <h2>Your surprise begins in...</h2>
+    <div id="countdown">5</div>
+    <p class="fade-text">Ready for the magic...</p>
+  </div>
+
+  <!-- 🎥 Video -->
+  <div id="video-section">
+    <video id="surprise-video" controls>
+      <source src="video/surprise.mp4" type="video/mp4" />
+    </video>
+    <div class="final-message">
+      <h2>Thank you for everything, Nanna 💖</h2>
+      <button onclick="restart()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
